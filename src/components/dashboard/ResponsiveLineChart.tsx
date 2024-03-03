@@ -31,15 +31,15 @@ export const ResponsiveLineChart = ({
   colors,
 }: TResponsiveLineChartProps) => {
   const data = [
-    { date: 'Oct 2022', value: 20000 },
-    { date: 'Dec 2022', value: 18000 },
-    { date: 'Feb 2023', value: 19000 },
-    { date: 'Apr 2023', value: 18000 },
-    { date: 'Jun 2023', value: 22500 },
-    { date: 'Aug 2023', value: 15000 },
-    { date: 'Oct 2023', value: 23000 },
-    { date: 'Dec 2023', value: 32000 },
-    { date: 'Jan 2024', value: 18000 },
+    { date: 'Oct 2022', value: 20000, bgValue: 22000 },
+    { date: 'Dec 2022', value: 18000, bgValue: 12000 },
+    { date: 'Feb 2023', value: 19000, bgValue: 12000 },
+    { date: 'Apr 2023', value: 18000, bgValue: 12000 },
+    { date: 'Jun 2023', value: 22500, bgValue: 22500 },
+    { date: 'Aug 2023', value: 15000, bgValue: 12000 },
+    { date: 'Oct 2023', value: 23000, bgValue: 22000 },
+    { date: 'Dec 2023', value: 32000, bgValue: 32000 },
+    { date: 'Jan 2024', value: 18000, bgValue: 12000 },
   ];
 
   const YTickFormatter = (number) => {
@@ -77,6 +77,15 @@ export const ResponsiveLineChart = ({
           dataKey='value'
           stroke='#65b8eb'
           strokeWidth={3}
+        />
+        <Line
+          activeDot={false}
+          dot={false}
+          type='bumpX'
+          dataKey='bgValue'
+          stroke='#65b8eb'
+          strokeWidth={3}
+          strokeDasharray='4'
         />
       </LineChart>
     </ResponsiveContainer>
