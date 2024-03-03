@@ -14,19 +14,23 @@ export const TabItem = ({ label, data, isActive, clickHandler }: TTabItem) => {
 
   return (
     <div
-      className={`w-64 cursor-pointer hover:bg-gray-300 mx-1 rounded-md px-4 py-2 text-gray-600 ${
+      onClick={clickHandler}
+      className={`w-64 cursor-pointer hover:bg-gray-300 mx-1 rounded-md px-4 py-2 text-gray-700 ${
         isActive ? 'bg-gray-200' : ''
       }`}
     >
       <div className='flex items-center justify-between'>
-        <a className='font-semibold' onClick={clickHandler}>
+        <p className='font-semibold border-b-2 border-spacing-2 border-dotted border-gray-400'>
           {label}
-        </a>
+        </p>
         <PencilIcon fill='true' className='h-4 fill-gray-500' />
       </div>
       <div className='mt-2 flex items-center gap-4'>
         <p className='text-xl font-bold'>{data.current}</p>
-        <p className='text-sm'>{data.change}%</p>
+        <div className='flex items-center -ml-2'>
+          <img src='/caret-up-outline.svg' className='opacity-60 h-4' />
+          <p className='text-sm text-gray-500'>{data.change}%</p>
+        </div>
       </div>
     </div>
   );
