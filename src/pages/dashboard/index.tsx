@@ -102,6 +102,21 @@ export const Dashboard: React.FC = () => {
         />
       ),
     },
+    {
+      id: 3,
+      label: 'Conversion rate',
+      data: { current: '3.18%', change: 7 },
+      content: (
+        <ResponsiveAreaChart
+          kpi='New customers'
+          data={memoizedNewCustomersData}
+          colors={{
+            stroke: 'rgb(76, 175, 80)',
+            fill: 'rgba(54, 162, 235, 0.2)',
+          }}
+        />
+      ),
+    },
   ];
 
   return (
