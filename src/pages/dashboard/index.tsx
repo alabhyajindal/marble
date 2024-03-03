@@ -9,6 +9,7 @@ import { ResponsiveBarChart } from '../../components/dashboard/ResponsiveBarChar
 import { TabView } from '../../components/dashboard/TabView';
 import { RecentSales } from '../../components/dashboard/RecentSales';
 import { IChartDatum, TTab } from '../../interfaces';
+import { ResponsiveLineChart } from '../../components/dashboard/ResponsiveLineChart';
 
 const filters: CrudFilter[] = [
   {
@@ -62,7 +63,7 @@ export const Dashboard: React.FC = () => {
       label: 'Online store sessions',
       data: { current: '255,581', change: 9 },
       content: (
-        <ResponsiveAreaChart
+        <ResponsiveLineChart
           kpi='Daily revenue'
           data={memoizedRevenueData}
           colors={{
@@ -103,7 +104,7 @@ export const Dashboard: React.FC = () => {
       ),
     },
     {
-      id: 3,
+      id: 4,
       label: 'Conversion rate',
       data: { current: '3.18%', change: 7 },
       content: (
