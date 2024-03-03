@@ -54,14 +54,26 @@ export const ResponsiveLineChart = ({
         data={data}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >
-        <CartesianGrid strokeDasharray='3 3' vertical={false} />
-        <XAxis dataKey='date' />
-        <YAxis tickFormatter={YTickFormatter} />
+        <CartesianGrid vertical={false} />
+        <XAxis
+          dataKey='date'
+          axisLine={false}
+          tickLine={false}
+          tickMargin={12}
+          unit=''
+        />
+        <YAxis
+          type='number'
+          tickFormatter={YTickFormatter}
+          domain={[0, 40000]}
+          tickCount={3}
+          axisLine={false}
+          tickMargin={12}
+        />
         <Tooltip />
-        <Legend />
         <Line
           dot={false}
-          type='monotone'
+          type='bumpX'
           dataKey='value'
           stroke='#65b8eb'
           strokeWidth={3}
