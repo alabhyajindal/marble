@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { CrudFilter, useList } from '@refinedev/core';
 import dayjs from 'dayjs';
 import Stats from '../../components/dashboard/Stats';
@@ -26,6 +26,10 @@ const filters: CrudFilter[] = [
 ];
 
 export const Dashboard: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Dashboard | Marble AI';
+  }, []);
+
   const { data: dailyRevenue } = useList<IChartDatum>({
     resource: 'dailyRevenue',
     filters,

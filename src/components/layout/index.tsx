@@ -4,12 +4,8 @@ import { Menu } from '../menu';
 
 export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div className=''>
-      <Menu />
-      <div className='p-4 bg-zinc-100'>
-        <Breadcrumb />
-        <div>{children}</div>
-      </div>
+    <div className='h-full bg-zinc-100 px-12 pt-8'>
+      <div>{children}</div>
     </div>
   );
 };
