@@ -60,7 +60,6 @@ export const ResponsiveLineChart = ({
           axisLine={false}
           tickLine={false}
           tickMargin={12}
-          unit=''
         />
         <YAxis
           type='number'
