@@ -132,7 +132,7 @@ export const Dashboard: React.FC = () => {
         newCustomers={newCustomers}
       /> */}
       <TabView tabs={tabs} />
-      <RecentSales />
+      {/* <RecentSales /> */}
     </>
   );
 };

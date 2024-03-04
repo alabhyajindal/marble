@@ -19,7 +19,7 @@ export const TabView = ({ tabs }: TTabViewProps) => {
   }
 
   return (
-    <div className='mx-auto p-4 bg-slate-50 border rounded-lg drop-shadow-sm'>
+    <div className='mx-6 my-8 p-4 bg-slate-50 border rounded-lg drop-shadow-md'>
       <div className='flex items-center justify-between mr-4'>
         <div className='tabs'>
           {tabs?.map((tab: TTab, index: number) => (
