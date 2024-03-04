@@ -1,10 +1,8 @@
-# Marble AI
+# Marble AI Dashboard
 
-This is a dashboard created with Refine and Daisy UI.
+Dashboard created for Marble AI with Refine and Daisy UI.
 
-## View the project
-
-View the project online: https://marble-dashboard.netlify.app/dashboard
+![Screenshot](/public/marble-dashboard.png)
 
 ## Set up locally
 
