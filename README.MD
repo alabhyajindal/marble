@@ -2,9 +2,11 @@
 
 This is a dashboard created with Refine and Daisy UI.
 
+## View the project
+
 View the project online: https://marble-dashboard.netlify.app/dashboard
 
-To build locally:
+## Set up locally
 
 1. Clone the repo
 
