@@ -19,17 +19,19 @@ export const TabView = ({ tabs }: TTabViewProps) => {
   }
 
   return (
-    <div className='mx-auto py-4 bg-slate-50 border rounded-lg drop-shadow-md'>
-      <div className='tabs mx-4 items-center'>
-        {tabs?.map((tab: TTab, index: number) => (
-          <TabItem
-            key={tab?.id}
-            label={tab?.label}
-            data={tab?.data}
-            isActive={index === activeTab}
-            clickHandler={() => setActiveTab(index)}
-          />
-        ))}
+    <div className='mx-auto p-4 bg-slate-50 border rounded-lg drop-shadow-sm'>
+      <div className='flex items-center justify-between mr-4'>
+        <div className='tabs'>
+          {tabs?.map((tab: TTab, index: number) => (
+            <TabItem
+              key={tab?.id}
+              label={tab?.label}
+              data={tab?.data}
+              isActive={index === activeTab}
+              clickHandler={() => setActiveTab(index)}
+            />
+          ))}
+        </div>
         <div
           onClick={toggleCollapse}
           className='cursor-pointer ml-4 h-4 hover:bg-gray-300 p-3 flex items-center rounded-md'

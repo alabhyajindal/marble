@@ -31,15 +31,15 @@ export const ResponsiveLineChart = ({
   colors,
 }: TResponsiveLineChartProps) => {
   const data = [
-    { date: 'Oct 2022', value: 20000, bgValue: 22000 },
-    { date: 'Dec 2022', value: 18000, bgValue: 12000 },
-    { date: 'Feb 2023', value: 19000, bgValue: 12000 },
-    { date: 'Apr 2023', value: 18000, bgValue: 12000 },
-    { date: 'Jun 2023', value: 22500, bgValue: 22500 },
-    { date: 'Aug 2023', value: 15000, bgValue: 12000 },
-    { date: 'Oct 2023', value: 23000, bgValue: 22000 },
-    { date: 'Dec 2023', value: 32000, bgValue: 32000 },
-    { date: 'Jan 2024', value: 18000, bgValue: 12000 },
+    { date: 'Oct 2022', value: 20000, lastYearValue: 19000 },
+    { date: 'Dec 2022', value: 18000, lastYearValue: 17000 },
+    { date: 'Feb 2023', value: 19000, lastYearValue: 22000 },
+    { date: 'Apr 2023', value: 18000, lastYearValue: 24000 },
+    { date: 'Jun 2023', value: 22500, lastYearValue: 22500 },
+    { date: 'Aug 2023', value: 15000, lastYearValue: 21000 },
+    { date: 'Oct 2023', value: 23000, lastYearValue: 20000 },
+    { date: 'Dec 2023', value: 32000, lastYearValue: 19000 },
+    { date: 'Jan 2024', value: 22000, lastYearValue: 21000 },
   ];
 
   const YTickFormatter = (number) => {
@@ -47,12 +47,12 @@ export const ResponsiveLineChart = ({
   };
 
   return (
-    <ResponsiveContainer height={400}>
+    <ResponsiveContainer height={300} width='100%'>
       <LineChart
-        width={730}
+        // width={730}
         height={250}
         data={data}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
       >
         <CartesianGrid vertical={false} />
         <XAxis
@@ -82,10 +82,11 @@ export const ResponsiveLineChart = ({
           activeDot={false}
           dot={false}
           type='bumpX'
-          dataKey='bgValue'
-          stroke='#65b8eb'
+          dataKey='lastYearValue'
+          stroke='#a3d4f3'
           strokeWidth={3}
-          strokeDasharray='4'
+          strokeDasharray='6'
+          isAnimationActive={false}
         />
       </LineChart>
     </ResponsiveContainer>
